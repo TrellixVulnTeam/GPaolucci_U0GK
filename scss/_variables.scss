@@ -1,0 +1,32 @@
+$font-family:"Roboto", sans-serif;
+$font-style:(
+  fontSizeNav: 23px,
+  fontColorFooter:rgba(252, 252, 252, 1),
+  fontWeightNav: bold,
+);
+$width-style:(
+  w-100: 100%,
+  widthIndexImg:7rem,
+  widthDivEquipoTablet: 400px,
+  maxWidthEquipoImg: 450px,
+  widthColEmpresa: 600px,
+  widthCarouselDesktop:500px,
+  widthCarouselTablet:300px,
+);
+$height-style:(
+  heightGalTablet: 330px,
+  maxHeightGalDesktop: 430px,
+  heightForm: 620px
+);
+$bg-color-primario: rgba(13, 13, 13, 1);
+$bg-color-secundario:rgba(237, 238, 239, 1);
+$box-shadows:2px 2px 16px rgba(0, 0, 0, 0.75);
+$accordion-style:(
+  borde: 2px solid rgba(237, 238, 239, 1),
+  bordeColorFocus: rgba(13, 13, 13, 0.5),
+  sizeFuenteTablet: 16px,
+  sizeFuenteDesktop: 18px,
+  sizeBotonTablet: 18px,
+  sizeBotonDesktop: 21px,
+);
+

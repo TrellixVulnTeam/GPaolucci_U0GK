@@ -1,0 +1,31 @@
+@mixin flex-align-center{
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex-center{
+    @include flex-align-center();
+    justify-content: center;
+}
+
+@mixin flex-spaceAround {
+    @include flex-align-center();
+    justify-content: space-around;
+}
+
+@mixin flex-end{
+    @include flex-align-center();
+    justify-content: end;
+}
+
+@mixin galeria-img{
+    object-fit: cover;
+    transition: transform 0.2s;
+    border: 2px solid white;
+    border-radius: 5px;
+    box-shadow: $box-shadows;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}

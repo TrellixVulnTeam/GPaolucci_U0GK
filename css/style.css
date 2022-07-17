@@ -1,0 +1,150 @@
+/*Colores: rgba(13, 13, 13, 1); negro fondo
+rgba(252, 252, 252, 1); blanco fondo
+rgba(227, 6, 19, 0.85); rojo botones
+rgba(237, 238, 239, 1); gris fondo
+rgba( 227, 6, 19,1) rojo puro
+rgba(126,126,126,1) gris botones
+*/
+* {
+  margin: 0;
+  padding: 0; }
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.spaceAround {
+  display: flex;
+  align-items: center;
+  justify-content: space-around; }
+
+.end {
+  display: flex;
+  align-items: center;
+  justify-content: end; }
+
+body {
+  font-family: "Roboto", sans-serif !important;
+  width: 100%; }
+
+footer, nav {
+  background-color: #0d0d0d;
+  color: #fcfcfc; }
+
+nav {
+  font-size: 23px;
+  font-weight: bold; }
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%; }
+
+a.active, a:active {
+  background-color: #0d0d0d !important; }
+
+.btn {
+  box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.75); }
+
+.whatsapp {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 33px;
+  z-index: 100; }
+
+.whatsapp-icon {
+  margin-top: 13px; }
+
+/*Secciones con distinto Color*/
+#servicios,
+#multimarca,
+#empresaHistoria2,
+.mainClientesFernanda, .containerCarousel, .ubicacionContacto {
+  background-color: #edeeef; }
+
+/*INDEX.HTML*/
+.serviciosImagen,
+.multimarcaImg {
+  width: 7rem;
+  margin-bottom: 1rem; }
+
+/*NOSOTROS.HTML*/
+.equipoTarjetaImg {
+  max-width: 450px; }
+
+/*GALERIA.HTML*/
+.carousel-inner img {
+  margin: auto;
+  width: 500px; }
+
+/*CONSEJOS.HTML*/
+.accordion-button:not(.collapsed) {
+  color: #fcfcfc;
+  background-color: #0d0d0d; }
+
+.accordion-button:not(.collapsed)::after {
+  filter: brightness(0%) invert(70%); }
+
+.accordion-button:focus {
+  box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.75);
+  border-color: rgba(13, 13, 13, 0.5); }
+
+/*CONTACTO.HTML*/
+.colForm {
+  height: 620px; }
+
+@media screen and (max-width: 1023px) {
+  #noDesplegable {
+    display: none; }
+  /*EMPRESA.HTML*/
+  .colEmpresa {
+    max-width: 600px; }
+  /*GALERIA.HTML*/
+  .galeriaImg {
+    object-fit: cover;
+    transition: transform 0.2s;
+    border: 2px solid white;
+    border-radius: 5px;
+    box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.75);
+    max-height: 330px; }
+    .galeriaImg:hover {
+      transform: scale(1.1); }
+  .carousel-inner img {
+    margin: auto;
+    width: 300px; }
+  /*CONSEJOS.HTML*/
+  .accordion-item {
+    font-size: 16px; }
+  .accordion-button {
+    font-size: 18px;
+    border: 2px solid #edeeef; } }
+
+@media screen and (min-width: 1024px) {
+  #desplegable {
+    display: none; }
+  /*GALERIA.HTML*/
+  .galeriaImg {
+    object-fit: cover;
+    transition: transform 0.2s;
+    border: 2px solid white;
+    border-radius: 5px;
+    box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.75);
+    min-height: 330px;
+    max-height: 430px; }
+    .galeriaImg:hover {
+      transform: scale(1.1); }
+  /*CONSEJOS.HTML*/
+  .accordion-item {
+    font-size: 18px; }
+  .accordion-button {
+    font-size: 21px;
+    border: 2px solid #edeeef; } }

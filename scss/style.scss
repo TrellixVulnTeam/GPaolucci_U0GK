@@ -1,0 +1,195 @@
+@import "variables";
+@import "mixins";
+
+/*Colores: rgba(13, 13, 13, 1); negro fondo
+rgba(252, 252, 252, 1); blanco fondo
+rgba(227, 6, 19, 0.85); rojo botones
+rgba(237, 238, 239, 1); gris fondo
+rgba( 227, 6, 19,1) rojo puro
+rgba(126,126,126,1) gris botones
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .center {
+    @include flex-center;
+  }
+  
+  .spaceAround {
+    @include flex-spaceAround;
+  }
+  
+  .end {
+    @include flex-end;
+  }
+  
+  body {
+    font-family: $font-family !important;
+    width: map-get($width-style, w-100);
+  }
+  
+  footer {
+    background-color: $bg-color-primario;
+    color: map-get($font-style, fontColorFooter);
+  }
+
+  nav{
+    @extend footer;
+    font-size: map-get($font-style, fontSizeNav);
+    font-weight: map-get($font-style, fontWeightNav);
+    }
+    
+  .navbar-nav {
+    @include flex-spaceAround;
+    width: map-get($width-style, w-100);
+  }
+
+  a.active, a:active { 
+    background-color: $bg-color-primario !important; 
+  }
+
+  .btn{
+    box-shadow: $box-shadows;
+  }
+
+  .whatsapp {
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:40px;
+    right:40px;
+    background-color:#25d366;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    font-size:33px;
+    z-index:100;
+  }
+  
+  .whatsapp-icon {
+    margin-top:13px;
+  }
+
+  /*Secciones con distinto Color*/
+  
+  #servicios,
+  #multimarca,
+  #empresaHistoria2,
+  .mainClientesFernanda, .containerCarousel,.ubicacionContacto {
+    background-color: $bg-color-secundario;
+  }
+  
+  /*INDEX.HTML*/
+  
+  .serviciosImagen,
+  .multimarcaImg {
+    width: map-get($width-style, widthIndexImg);
+    margin-bottom: 1rem;
+  }
+
+  /*NOSOTROS.HTML*/
+
+  .equipoTarjetaImg{
+    max-width: map-get($width-style , maxWidthEquipoImg );
+  }
+  
+  /*GALERIA.HTML*/
+
+  .carousel-inner img{
+     margin:auto; 
+     width: map-get($width-style, widthCarouselDesktop);
+    }
+  
+    /*CONSEJOS.HTML*/
+   
+    .accordion-button{
+      &:not(.collapsed) {
+        color: map-get($font-style, fontColorFooter);
+        background-color: $bg-color-primario;
+      }
+    
+      &:not(.collapsed)::after{
+        filter: brightness(0%) invert(70%);
+      }
+    
+      &:focus{
+        box-shadow: $box-shadows;
+        border-color: map-get($accordion-style , bordeColorFocus);
+      }
+    }
+  
+    /*CONTACTO.HTML*/
+
+    .colForm{
+      height: map-get($height-style, heightForm);
+    }
+
+  @media screen and (max-width: 1023px) {
+    
+    #noDesplegable {
+      display: none;
+    }
+
+    /*EMPRESA.HTML*/
+
+    .colEmpresa{
+      max-width: map-get($width-style, widthColEmpresa);
+    }
+
+    /*GALERIA.HTML*/
+  
+    .galeriaImg {
+      @include galeria-img;
+      max-height: map-get($height-style, heightGalTablet);
+    }
+  
+    .carousel-inner img{
+      margin:auto; 
+      width: map-get($width-style, widthCarouselTablet);
+     }
+  
+     /*CONSEJOS.HTML*/
+  
+     .accordion{
+      &-item{
+        font-size: map-get($accordion-style, sizeFuenteTablet);
+      }
+      &-button{
+        font-size: map-get($accordion-style, sizeBotonTablet);
+        border: map-get($accordion-style , borde );
+      }
+      
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {
+    #desplegable {
+      display: none;
+    }
+  
+    /*GALERIA.HTML*/
+  
+    .galeriaImg {
+      @include galeria-img;
+      min-height: map-get($height-style, heightGalTablet);
+      max-height: map-get($height-style, maxHeightGalDesktop);       
+    }
+  
+    /*CONSEJOS.HTML*/
+    
+    .accordion{
+      &-item{
+        font-size: map-get($accordion-style, sizeFuenteDesktop);
+      }
+      &-button{
+        font-size: map-get($accordion-style, sizeBotonDesktop);
+        border: map-get($accordion-style , borde );
+      }
+    }
+   
+  
+  }
+  
